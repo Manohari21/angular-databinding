@@ -1,0 +1,22 @@
+<h1>String Interpolation</h1>
+
+<h2>Welcome {{ firstname }} {{ lastname }}</h2>
+
+<h1>Property binding</h1>
+<h3 [innerText]="title"></h3>
+<button [disabled]="isDisabled">Iam Disabled</button>
+<h3 [style.color]="getColor()">Style binding</h3>
+<button [style.color]="status == 'error' ? 'red' : 'blue'">Status</button>
+<br /><br />
+
+<h3>Event Binding</h3>
+<button style="color:blue" (click)="clickMe()">Click Me</button>
+<p>you have clicked me at {{ clickCount }} times</p>
+
+<h3>Two way binding</h3>
+<input [(ngModel)]="name" />
+<p>{{ name }}</p>
+
+<h3>ngStyle Directive</h3>
+<input [(ngModel)]="color" />
+<div [ngStyle]="{ color: color }">Change my color</div>
